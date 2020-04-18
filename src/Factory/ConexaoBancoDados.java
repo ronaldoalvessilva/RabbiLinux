@@ -81,7 +81,7 @@ public class ConexaoBancoDados {
                 file = new FileInputStream("/home/ConectaRabbit.properties");//ALTERE AQUI DE ACORDO COM SUA NECESSIDADE
             } else {
                 //Se Windows
-                file = new FileInputStream("C:\\SysConp\\Rabbit\\ConectaRabbit.properties");////ALTERE AQUI DE ACORDO COM SUA NECESSIDADE
+                file = new FileInputStream("C:\\SysConp\\RabbitLinux\\ConectaRabbit.properties");////ALTERE AQUI DE ACORDO COM SUA NECESSIDADE
             }
             props.load(file);
         } catch (FileNotFoundException ex) {
