@@ -29,7 +29,7 @@ public class ThreadHoraPopulcaoAlimentacao {
     AtividadesMensalRealizadaUnidades objAtividade = new AtividadesMensalRealizadaUnidades();
     //
     int pHORAS = 00;
-    int pMINUTOS = 01;
+    int pMINUTOS = 31;
     int pSEGUNDOS = 0;
     //
     String tipoOperacao = "População";
