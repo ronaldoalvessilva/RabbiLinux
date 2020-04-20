@@ -29,7 +29,7 @@ public class ThreadHoraPopulcaoAlimentacao {
     AtividadesMensalRealizadaUnidades objAtividade = new AtividadesMensalRealizadaUnidades();
     //
     int pHORAS = 00;
-    int pMINUTOS = 31;
+    int pMINUTOS = 1;
     int pSEGUNDOS = 0;
     //
     String tipoOperacao = "População";
@@ -71,8 +71,8 @@ public class ThreadHoraPopulcaoAlimentacao {
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
-                ficha();
-                System.out.println("População foi gerada com sucesso.");
+                    ficha();
+                    System.out.println("População foi gerada com sucesso.");
             }
         }, time);
     }
