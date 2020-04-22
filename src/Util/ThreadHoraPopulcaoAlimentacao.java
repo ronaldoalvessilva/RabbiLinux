@@ -71,25 +71,26 @@ public class ThreadHoraPopulcaoAlimentacao {
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
-                    ficha();
-                    System.out.println("População foi gerada com sucesso.");
+                ficha();
+                System.out.println("População foi gerada com sucesso.");
             }
         }, time);
     }
 
     public void ficha() {
-        //
-        objEntradaSaida.setDataMovimento(data);
-        objEntradaSaida.setHorarioMovimento(pHORA_PROCESSO);
-        objEntradaSaida.setTipoOperacao(tipoOperacao);
-        objEntradaSaida.setPopulacao(objEntradaSaida.getPopulacao());
-        objEntradaSaida.setUsuarioInsert(nameUser);
-        objEntradaSaida.setDataInsert(date);
-        objEntradaSaida.setHorarioInsert(hora);
-        listaRegistroES.selecionarRegistroEntrada(objEntradaSaida);
-        populacao.incluirEntradaSaidaPopulacao(objEntradaSaida);
-        //CONVERTER AS DADOS NA TABELA        
-        converteData.alterarDataEntradasSaidasUnidades(objAtividade);
+        if (pHORAS == 00 && pMINUTOS == 1) {
+            objEntradaSaida.setDataMovimento(data);
+            objEntradaSaida.setHorarioMovimento(pHORA_PROCESSO);
+            objEntradaSaida.setTipoOperacao(tipoOperacao);
+            objEntradaSaida.setPopulacao(objEntradaSaida.getPopulacao());
+            objEntradaSaida.setUsuarioInsert(nameUser);
+            objEntradaSaida.setDataInsert(date);
+            objEntradaSaida.setHorarioInsert(hora);
+            listaRegistroES.selecionarRegistroEntrada(objEntradaSaida);
+            populacao.incluirEntradaSaidaPopulacao(objEntradaSaida);
+            //CONVERTER AS DADOS NA TABELA        
+            converteData.alterarDataEntradasSaidasUnidades(objAtividade);
+        }
     }
 
     public void rodaRelogio() {
